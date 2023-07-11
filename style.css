@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+section > p {  /*--child combinator used to color all the p elements in every section--  (8)*/
+    color:#000000;
+}
+
+nav {  /*----navigation bar----*/
+    width: 100%;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    transform: translate(-0%,-99%); /*Used transform-translate to position the nav bar*/
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(103, 29, 44));
+} 
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 43px;
+    margin: 3px;
+    padding: 0 22px;
+    display: flex;
+    font-size:medium;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover {    /*--used user action psuedo classes here--(7)*/
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    transition: all ease 0.1s;  /*-----used transition here---------(18)*/
+}
+
+footer {    /*----footer-----*/
+    font-weight: 500;
+    color: #1c3548;
+    padding: 10px;
+    text-align:center;
+    background-color: #b06876;
+}
+
+.social-icon-table {
+    display:inline-flex;
+}
+
+footer a{
+    color: #1c3548;
+}
+
+footer p{
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.social-icon-table i {
+    font-size: 1.3rem;
+    margin-right: 18px;
+    margin-bottom: 1px;
+    opacity: 0.9;        /*used opacity to make element colour partially transparent--  (2)*/
+}
+
+.social-icon-table a:hover {
+    transform: translateY(-2px);  /*Used transform-translate to position the nav bar*/
+	transition: all ease 0.2s;       
+}
+
+.fa-twitter-square,   /*--used relational selectors here-- (13)*/
+.fa-facebook-square,
+.fa-youtube,
+.fa-instagram{
+    color: #ffffff;
+}
+/*---------------------------main page------------------------*/
+
+.intro { 
+    margin-top: 5%;
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow-x: none;
+}
+
+.intro-image {
+    margin-left: 2%;
+    background: url( images/1.11.jpg) no-repeat;
+    width: 600px;
+    height:500px;
+    background-size: contain;
+    transition: .20s;
+    border-radius: 100%;  /*--used border radius here--(15)*/
+}
+
+.intro-image:hover{
+    background: url(images/2.png) no-repeat;
+    width: 600px;
+    height: 500px;
+    background-size: contain;
+    transition: .20s;
+}
+
+.intro-text {
+    margin-right: 0%;
+    width:600px;
+}
+
+.intro-text >p{   /*--child combinator used to set the font size of p elements in every section--  (8)*/
+    font-size: 20px;
+}
+
+.intro-text h1 {
+    font-size: 3.5rem;
+    color: #1c3548;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 60px;
+}
+
+.about-button{
+    margin-top: 20px;
+    width: 150px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    background-color: #b06876;
+    border-radius: 20px;
+    box-shadow: 4px 10px 30px rgba(8, 8, 7, 0.4);
+}
+
+.about-button:hover {
+    background-color: #671d2c;
+    transition: all ease 0.2s;   /*used transition here (18)*/
+}
+
+.twitterFeed{
+    margin-right: 1%;
+    width:300px;
+    height: 600px;
+}
+/*---------------------------about page------------------------*/
+.about{
+    margin-top: 5%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about-text {
+    margin-top: 40px;
+    margin-left: 2%;
+    width: 50%;
+}
+
+.about-text-heading{
+    margin-left: 2%;
+}
+
+.about-table-container {
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-bottom: 2%;}
+
+table{
+    width:100%}
+
+th{
+    background-color: #b06876;
+}
+
+table,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {  /*----Nth pseudo class--- (11)*/
+    background-color: rgb(210, 207, 207);}
+
+.about-img {  /*---used a border for the image--- (14) */
+    transform: translate(-0%,0%);
+    margin-right: 2%;
+    border: 3px solid black;
+    width: 40%;
+    height: 600px;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-text-heading span {
+    color: #671d2c;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.about-text-heading h2 {
+    text-decoration: underline;
+    color: #1c3548;
+    font-size: 2.0rem;
+    margin: 0px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.about-table-text strong {
+    color: #1c3548;
+    margin: 0px;
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+
+.about-table-text p {
+    font-size: 1.0rem;
+}
+/*---------------------------blog page------------------------*/
+.topic {  
+    background-color: #000000;
+    margin-top: 5%;
+    padding: 1px;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.leftbox {  
+    float: left;
+    width: 75%;
+} 
+
+.rightbox { 
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.img1 { 
+    background-image: url(images/7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 20px;
+}
+
+.img2 { 
+    background-image: url(images/8.jpg);
+    width: 100%;
+    padding: 20px;
+}
+
+.card {  
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(199, 193, 193);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.card>h2{
+    text-decoration: underline;
+}
+
+.box:after { /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 800px) { /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    nav,.leftcolumn, .rightcolumn, footer { 
+        width: 100%;
+        padding: 0;
+    }
+}
+/*---------------------------newsletter page------------------------*/
+.contact {
+    background-image: url(images/10.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top:70px;
+}
+
+blockquote { /*----blockqoute code----*/
+    font-style: italic;
+    line-height: 1.618;
+    font-size: 1.2rem;
+    width: 600px;
+}
+
+blockquote::before { /*---- Pseudo elements with generated content-------(6)*/
+    content: open-quote;
+    font-size: 3.2rem;
+    top: 0;
+    left: 0;
+}
+  
+blockquote::after {
+    font-size: 3.2rem;
+    content: close-quote;
+    bottom: 0;
+    right: 0;
+}
+
+.contact :not(h3) {   /*--added negation psuedoclass--(10)*/
+    font-size: 1.0rem;
+    opacity: 1;   
+    color:#ffffff;
+    text-align: center;
+}
+
+.contact h3 {
+    color: #ffffff;
+	font-size:2.5rem;
+	margin:150px 20px 10px 20px;
+}
+
+.contact-input:valid{  /*----Used validity pseudo class----*/
+    background-color: #b06876;
+}
+
+.contact-input {
+    margin: 10px 0px 10px;
+	width:400px;
+	height:50px;
+	background-color:#FFFFFF;
+    display:flex;
+	justify-content: center;
+	border-radius: 50px;
+}
+
+.contact-input input {
+	width:100%;
+	background-color: transparent;
+	border:none;
+	outline: none;
+	text-align: center;
+	color:#242425 !important;
+}
+
+.contact-input button {
+    opacity: 1 !important;
+    border:none;
+	width:200px;
+	height:35px;
+	background-color: rgb(103, 29, 44); /*----added linear gradient(16)----*/
+	color:#FFFFFF !important;
+	display: flex;
+	font-size: 0.9rem !important;
+	justify-content: center;
+	align-items: center;
+	margin: auto 10px;
+	border-radius: 20px;
+	font-weight: 500;
+    animation-name: button-blink; /*----animation added to the submit button---(19)*/
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes button-blink {
+    50%{table-shadow:5px 8px 5px rgba(158, 58, 76, 0.7);}
+}
